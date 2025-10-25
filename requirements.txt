@@ -1,9 +1,11 @@
 aiohttp>=3.9.0
 aiogram==2.25.1
-Babel certifi magic-filter async-timeout pytz
+Babel
+certifi
+magic-filter
+async-timeout
 telegram
 flask
 pytz
 asyncio
-
 requests
