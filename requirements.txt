@@ -1,8 +1,9 @@
 aiohttp>=3.9.0
-aiogram==2.25.1 --no-deps
+aiogram==2.25.1
 Babel certifi magic-filter async-timeout pytz
 telegram
 flask
 pytz
 asyncio
+
 requests
