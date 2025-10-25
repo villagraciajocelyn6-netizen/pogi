@@ -1,4 +1,4 @@
-flask
+flask==3.0.3
 aiogram==2.25.1
 magic-filter==1.0.12
 async-timeout==4.0.2
