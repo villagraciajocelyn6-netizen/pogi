@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: moon-bot
+    env: python
+    plan: free
+    buildCommand: pip install --no-cache-dir -r requirements.txt
+    startCommand: python keep_alive.py && python main.py
+    envVars:
+      PYTHON_VERSION: 3.10.14
