@@ -5,4 +5,4 @@ COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD python python bot.py & keep_alive.py
+CMD ["bash", "-c", "python keep_alive.py & python bot.py"]
