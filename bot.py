@@ -35,13 +35,19 @@ user_generating = {}
 USERS_DIR = "users"
 KEYS_FILE = "keys.json"
 ULP_DIR = "ulp"
-ULP_FILE = os.path.join(ULP_DIR, "ulp.txt")
+ULP_FILE = "ulp.txt"
 
-if not os.path.exists(USERS_DIR):
-    os.makedirs(USERS_DIR)
+os.makedirs(USERS_DIR, exist_ok=True)
+os.makedirs(ULP_DIR, exist_ok=True)
 
-if not os.path.exists(ULP_DIR):
-    os.makedirs(ULP_DIR)
+ulp_files = [os.path.join(ULP_DIR, f) for f in os.listdir(ULP_DIR) if f.endswith(".txt")]
+
+if ulp_files:
+    ULP_FILE = random.choice(ulp_files)
+else:
+    ULP_FILE = os.path.join(ULP_DIR, "ulp.txt")
+
+print(f"Selected random ULP file: {ULP_FILE}")
 
 PH_TZ = pytz.timezone('Asia/Manila')
 
